@@ -28,11 +28,34 @@
             <objects>
                 <viewController storyboardIdentifier="KEParallaxCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kwK-KQ-hop" customClass="KEParallaxCollectionViewController" customModule="KEParallaxCollection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="evx-tr-Xi7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="294"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="344"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bzg-xQ-QCa" customClass="KEStoryLikeCollectionView" customModule="KEParallaxCollection" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="250"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FIRSATLAR" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="a5O-Qb-tDH">
+                                <rect key="frame" x="10" y="59" width="330" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Pdn-gN-qSQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RfO-HR-cOH">
+                                <rect key="frame" x="348" y="59" width="54" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="VTh-8i-KCM"/>
+                                    <constraint firstAttribute="width" constant="54" id="Zja-MV-7vU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                <state key="normal" title="Tümü">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAllClicked:" destination="kwK-KQ-hop" eventType="touchUpInside" id="8gC-4X-XxE"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bzg-xQ-QCa">
+                                <rect key="frame" x="0.0" y="94" width="414" height="250"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="X5F-h7-zjm"/>
@@ -124,16 +147,23 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="bzg-xQ-QCa" firstAttribute="top" secondItem="a5O-Qb-tDH" secondAttribute="bottom" constant="5" id="0nd-yV-sKc"/>
+                            <constraint firstItem="a5O-Qb-tDH" firstAttribute="leading" secondItem="BLQ-Ms-tFy" secondAttribute="leading" constant="10" id="6bc-O3-F8N"/>
+                            <constraint firstItem="RfO-HR-cOH" firstAttribute="leading" secondItem="a5O-Qb-tDH" secondAttribute="trailing" constant="8" id="GZF-7R-Nps"/>
                             <constraint firstItem="bzg-xQ-QCa" firstAttribute="leading" secondItem="BLQ-Ms-tFy" secondAttribute="leading" id="WU6-df-b3H"/>
-                            <constraint firstItem="bzg-xQ-QCa" firstAttribute="top" secondItem="BLQ-Ms-tFy" secondAttribute="top" id="YhF-XV-Uau"/>
+                            <constraint firstItem="bzg-xQ-QCa" firstAttribute="top" secondItem="BLQ-Ms-tFy" secondAttribute="top" constant="50" id="YhF-XV-Uau"/>
                             <constraint firstItem="BLQ-Ms-tFy" firstAttribute="trailing" secondItem="bzg-xQ-QCa" secondAttribute="trailing" id="jEC-Bw-K6N"/>
+                            <constraint firstItem="RfO-HR-cOH" firstAttribute="centerY" secondItem="a5O-Qb-tDH" secondAttribute="centerY" id="uos-uU-6WB"/>
+                            <constraint firstItem="BLQ-Ms-tFy" firstAttribute="trailing" secondItem="RfO-HR-cOH" secondAttribute="trailing" constant="12" id="wOP-K9-Gyj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BLQ-Ms-tFy"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="414" height="294"/>
+                    <size key="freeformSize" width="414" height="344"/>
                     <connections>
+                        <outlet property="btnAll" destination="RfO-HR-cOH" id="RHd-uc-4Ud"/>
                         <outlet property="collectionView" destination="bzg-xQ-QCa" id="tSQ-sL-pRQ"/>
+                        <outlet property="lblCategoryTitle" destination="a5O-Qb-tDH" id="gVO-S5-vlL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Isy-Kz-Wzp" sceneMemberID="firstResponder"/>

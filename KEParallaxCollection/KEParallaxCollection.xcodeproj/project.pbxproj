@@ -13,7 +13,6 @@
 		8235FC3E242C8BB200DF34AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8235FC3D242C8BB200DF34AE /* Assets.xcassets */; };
 		8235FC41242C8BB200DF34AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8235FC3F242C8BB200DF34AE /* LaunchScreen.storyboard */; };
 		8235FC49242C8C2100DF34AE /* KEParallaxCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8235FC48242C8C2100DF34AE /* KEParallaxCollectionViewController.swift */; };
-		8235FC4B242C8C6600DF34AE /* KEStoryLikeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8235FC4A242C8C6600DF34AE /* KEStoryLikeCollectionView.swift */; };
 		8235FC4D242C8C8400DF34AE /* KEParallaxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8235FC4C242C8C8400DF34AE /* KEParallaxCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +25,6 @@
 		8235FC40242C8BB200DF34AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8235FC42242C8BB200DF34AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8235FC48242C8C2100DF34AE /* KEParallaxCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KEParallaxCollectionViewController.swift; sourceTree = "<group>"; };
-		8235FC4A242C8C6600DF34AE /* KEStoryLikeCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KEStoryLikeCollectionView.swift; sourceTree = "<group>"; };
 		8235FC4C242C8C8400DF34AE /* KEParallaxCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KEParallaxCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,7 +60,6 @@
 			children = (
 				8235FC34242C8BB100DF34AE /* AppDelegate.swift */,
 				8235FC48242C8C2100DF34AE /* KEParallaxCollectionViewController.swift */,
-				8235FC4A242C8C6600DF34AE /* KEStoryLikeCollectionView.swift */,
 				8235FC4C242C8C8400DF34AE /* KEParallaxCell.swift */,
 				8235FC38242C8BB100DF34AE /* ViewController.swift */,
 				8235FC3A242C8BB100DF34AE /* Main.storyboard */,
@@ -148,7 +145,6 @@
 				8235FC39242C8BB100DF34AE /* ViewController.swift in Sources */,
 				8235FC4D242C8C8400DF34AE /* KEParallaxCell.swift in Sources */,
 				8235FC35242C8BB100DF34AE /* AppDelegate.swift in Sources */,
-				8235FC4B242C8C6600DF34AE /* KEStoryLikeCollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

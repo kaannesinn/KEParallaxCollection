@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, KEParallaxCollectionViewC
         window = UIWindow(frame: UIScreen.main.bounds)
         if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "KEParallaxCollectionViewController") as? KEParallaxCollectionViewController {
             vc.delegate = self
-            vc.itemArray = [(color: UIColor.red, title: "1 sdfasdf", price: 400.0, discountedPrice: 200.0),
+            vc.itemArray = [(color: UIColor.lightGray, title: "1 sdfasdf", price: 400.0, discountedPrice: 200.0),
                             (color: UIColor.yellow, title: "2 asdklfj asdfjk", price: 1400.0, discountedPrice: 1200.0),
                             (color: UIColor.green, title: "3 a23r", price: 43000.0, discountedPrice: 42000.0),
                             (color: UIColor.darkGray, title: "4 askdlfjlkajsdflkj", price: 123.5, discountedPrice: nil),
@@ -39,6 +39,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, KEParallaxCollectionViewC
         if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as? ViewController {
             if let navc = window?.rootViewController as? UINavigationController {
                 vc.view.backgroundColor = item.color
+                navc.present(vc, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    func allClicked() {
+        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as? ViewController {
+            if let navc = UIApplication.shared.delegate?.window??.rootViewController as? UINavigationController {
                 navc.present(vc, animated: true, completion: nil)
             }
         }
