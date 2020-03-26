@@ -35,11 +35,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate, KEParallaxCollectionViewC
         return true
     }
 
-    func cellDidSelect(item: (color: UIColor, title: String, price: CGFloat, discountedPrice: CGFloat?), indexPath: IndexPath) {
+    func cellDidSelect(item: (color: UIColor, title: String, price: CGFloat, discountedPrice: CGFloat?), indexPath: IndexPath, cell: KEParallaxCell?) {
         if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as? ViewController {
             if let navc = window?.rootViewController as? UINavigationController {
-                vc.view.backgroundColor = item.color
-                navc.present(vc, animated: true, completion: nil)
+                vc.loadView()
+                vc.imgView.backgroundColor = item.color
+
+                let imgView = UIImageView(image: cell?.imgCell.image)
+                imgView.backgroundColor = item.color
+                let rect = UIApplication.shared.delegate?.window!!.convert(cell!.imgCell.frame, from: cell?.contentView)
+//                let rect = cell?.contentView.convert(cell!.imgCell.frame, to: UIApplication.shared.delegate?.window!)
+                imgView.frame = rect!
+                imgView.layer.cornerRadius = 20.0
+                imgView.layer.masksToBounds = true
+                UIApplication.shared.delegate?.window??.addSubview(imgView)
+                
+                UIView.animate(withDuration: 0.25, delay: 0, options: [.allowAnimatedContent, .allowUserInteraction], animations: {
+                    imgView.frame = vc.imgView.frame
+                }, completion: nil)
+
+                vc.modalPresentationStyle = .overFullScreen
+                vc.modalTransitionStyle = .crossDissolve
+                navc.present(vc, animated: true) {
+                    imgView.removeFromSuperview()
+                }
             }
         }
     }

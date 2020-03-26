@@ -9,7 +9,7 @@
 import UIKit
 
 protocol KEParallaxCellDelegate: NSObject {
-    func btnSelected(sender: UIButton)
+    func btnSelected(sender: UIButton, cell: KEParallaxCell)
 }
 
 class KEParallaxCell: UICollectionViewCell {
@@ -40,7 +40,7 @@ class KEParallaxCell: UICollectionViewCell {
                     self.contentView.transform = CGAffineTransform.identity
                 }, completion: { (finished) in
                     if finished {
-                        self.delegate?.btnSelected(sender: sender)
+                        self.delegate?.btnSelected(sender: sender, cell: self)
                     }
                 })
             }

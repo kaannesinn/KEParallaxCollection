@@ -9,7 +9,7 @@
 import UIKit
 
 protocol KEParallaxCollectionViewControllerDelegate: NSObject {
-    func cellDidSelect(item: (color: UIColor, title: String, price: CGFloat, discountedPrice: CGFloat?), indexPath: IndexPath)
+    func cellDidSelect(item: (color: UIColor, title: String, price: CGFloat, discountedPrice: CGFloat?), indexPath: IndexPath, cell: KEParallaxCell?)
     func allClicked()
 }
 
@@ -124,13 +124,13 @@ class KEParallaxCollectionViewController: UIViewController, UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let item = itemArray?[indexPath.row] {
-            delegate?.cellDidSelect(item: item, indexPath: indexPath)
+            delegate?.cellDidSelect(item: item, indexPath: indexPath, cell: nil)
         }
     }
     
-    func btnSelected(sender: UIButton) {
+    func btnSelected(sender: UIButton, cell: KEParallaxCell) {
         if let item = itemArray?[sender.tag] {
-            delegate?.cellDidSelect(item: item, indexPath: IndexPath(row: sender.tag, section: 0))
+            delegate?.cellDidSelect(item: item, indexPath: IndexPath(row: sender.tag, section: 0), cell: cell)
         }
     }
     

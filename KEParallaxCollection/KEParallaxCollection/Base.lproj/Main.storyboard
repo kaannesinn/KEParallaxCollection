@@ -15,13 +15,41 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r4f-2V-LMS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="362"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="r4f-2V-LMS" secondAttribute="height" multiplier="207:181" id="4f5-Oy-ned"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Em-iq-Fjx">
+                                <rect key="frame" x="305" y="44" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="q8h-68-yBl"/>
+                                </constraints>
+                                <state key="normal" title="Kapat"/>
+                                <connections>
+                                    <action selector="closeClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mrs-Us-pHJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7Em-iq-Fjx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8rN-AO-OCi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Em-iq-Fjx" secondAttribute="trailing" constant="39" id="Qgs-r7-m0O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="r4f-2V-LMS" secondAttribute="top" constant="44" id="Rb1-DF-VkL"/>
+                            <constraint firstItem="r4f-2V-LMS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TjU-7U-mAY"/>
+                            <constraint firstItem="r4f-2V-LMS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eUz-6r-NJ3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imgView" destination="r4f-2V-LMS" id="7Xx-bo-RHX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="138"/>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
         <!--Parallax Collection View Controller-->
         <scene sceneID="lS9-18-YXl">
@@ -74,7 +102,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="370" height="240"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dpb-aX-jga">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dpb-aX-jga">
                                                     <rect key="frame" x="10" y="10" width="350" height="220"/>
                                                     <color key="backgroundColor" red="0.43981119790000001" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
