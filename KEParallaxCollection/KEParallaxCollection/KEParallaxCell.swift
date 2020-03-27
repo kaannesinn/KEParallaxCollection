@@ -19,15 +19,32 @@ class KEParallaxCell: UICollectionViewCell {
     @IBOutlet weak var lblDiscountedPrice: UILabel!
     @IBOutlet weak var btnOnCell: UIButton!
     var delegate: KEParallaxCellDelegate?
-    
+    var backgroundImageOffset: CGPoint! = CGPoint.zero
+    @IBOutlet weak var viewEmbeddingImage: UIView!
+
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+//    override func layoutSubviews() {
+//        super.layoutSubviews()
+//        self.imgCell.frame = CGRect(x: 0, y: 0, width: self.bounds.width + 35, height: self.bounds.height)
+//        self.setBackgroundImageOffset(imageOffset: self.backgroundImageOffset)
+//    }
+    
+    func setBackgroundImageOffset(imageOffset: CGPoint) {
+        self.backgroundImageOffset = imageOffset
+        let frame: CGRect = imgCell.bounds
+        let offsetFrame: CGRect = frame.offsetBy(dx: self.backgroundImageOffset.x, dy: self.backgroundImageOffset.y)
+        imgCell.frame = offsetFrame
     }
     
     func updateCellImage(isImageRounded: Bool = true, cornerRadius: CGFloat = 20.0) {
         if isImageRounded {
             imgCell.layer.cornerRadius = cornerRadius
             imgCell.layer.masksToBounds = true
+            viewEmbeddingImage.layer.cornerRadius = cornerRadius
+            viewEmbeddingImage.layer.masksToBounds = true
         }
     }
     

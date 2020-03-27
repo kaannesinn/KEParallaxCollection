@@ -14,6 +14,7 @@
 		8235FC41242C8BB200DF34AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8235FC3F242C8BB200DF34AE /* LaunchScreen.storyboard */; };
 		8235FC49242C8C2100DF34AE /* KEParallaxCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8235FC48242C8C2100DF34AE /* KEParallaxCollectionViewController.swift */; };
 		8235FC4D242C8C8400DF34AE /* KEParallaxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8235FC4C242C8C8400DF34AE /* KEParallaxCell.swift */; };
+		82E82F71242DE25C0014EE7A /* asd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82E82F70242DE25C0014EE7A /* asd.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8235FC42242C8BB200DF34AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8235FC48242C8C2100DF34AE /* KEParallaxCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KEParallaxCollectionViewController.swift; sourceTree = "<group>"; };
 		8235FC4C242C8C8400DF34AE /* KEParallaxCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KEParallaxCell.swift; sourceTree = "<group>"; };
+		82E82F70242DE25C0014EE7A /* asd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = asd.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				8235FC3D242C8BB200DF34AE /* Assets.xcassets */,
 				8235FC3F242C8BB200DF34AE /* LaunchScreen.storyboard */,
 				8235FC42242C8BB200DF34AE /* Info.plist */,
+				82E82F70242DE25C0014EE7A /* asd.jpg */,
 			);
 			path = KEParallaxCollection;
 			sourceTree = "<group>";
@@ -130,6 +133,7 @@
 			files = (
 				8235FC41242C8BB200DF34AE /* LaunchScreen.storyboard in Resources */,
 				8235FC3E242C8BB200DF34AE /* Assets.xcassets in Resources */,
+				82E82F71242DE25C0014EE7A /* asd.jpg in Resources */,
 				8235FC3C242C8BB100DF34AE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

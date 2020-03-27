@@ -41,6 +41,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, KEParallaxCollectionViewC
                 vc.loadView()
                 vc.imgView.backgroundColor = item.color
 
+                let embeddingView = UIView(frame: vc.imgView.frame)
+                embeddingView.backgroundColor = UIColor.clear
+                embeddingView.clipsToBounds = true
+                embeddingView.layer.cornerRadius = 20.0
+                embeddingView.layer.masksToBounds = true
                 let imgView = UIImageView(image: cell?.imgCell.image)
                 imgView.backgroundColor = item.color
                 let rect = UIApplication.shared.delegate?.window!!.convert(cell!.imgCell.frame, from: cell?.contentView)
@@ -48,7 +53,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, KEParallaxCollectionViewC
                 imgView.frame = rect!
                 imgView.layer.cornerRadius = 20.0
                 imgView.layer.masksToBounds = true
-                UIApplication.shared.delegate?.window??.addSubview(imgView)
+                embeddingView.addSubview(imgView)
+                UIApplication.shared.delegate?.window??.addSubview(embeddingView)
                 
                 UIView.animate(withDuration: 0.25, delay: 0, options: [.allowAnimatedContent, .allowUserInteraction], animations: {
                     imgView.frame = vc.imgView.frame
@@ -57,7 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, KEParallaxCollectionViewC
                 vc.modalPresentationStyle = .overFullScreen
                 vc.modalTransitionStyle = .crossDissolve
                 navc.present(vc, animated: true) {
-                    imgView.removeFromSuperview()
+                    embeddingView.removeFromSuperview()
                 }
             }
         }

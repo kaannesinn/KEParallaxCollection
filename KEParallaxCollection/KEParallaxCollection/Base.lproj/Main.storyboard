@@ -102,27 +102,39 @@
                                             <rect key="frame" x="0.0" y="0.0" width="370" height="240"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dpb-aX-jga">
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HCw-d4-fdk">
                                                     <rect key="frame" x="10" y="10" width="350" height="220"/>
-                                                    <color key="backgroundColor" red="0.43981119790000001" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </imageView>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dpb-aX-jga">
+                                                            <rect key="frame" x="0.0" y="0.0" width="350" height="220"/>
+                                                            <color key="backgroundColor" red="0.43981119790000001" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="dpb-aX-jga" firstAttribute="centerY" secondItem="HCw-d4-fdk" secondAttribute="centerY" id="4gc-uB-pjG"/>
+                                                        <constraint firstItem="dpb-aX-jga" firstAttribute="top" secondItem="HCw-d4-fdk" secondAttribute="top" id="648-O5-CDH"/>
+                                                        <constraint firstItem="dpb-aX-jga" firstAttribute="centerX" secondItem="HCw-d4-fdk" secondAttribute="centerX" id="oXB-oz-sXB"/>
+                                                        <constraint firstItem="dpb-aX-jga" firstAttribute="leading" secondItem="HCw-d4-fdk" secondAttribute="leading" id="u14-dr-ejv"/>
+                                                    </constraints>
+                                                </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Iuf-sG-jdB">
-                                                    <rect key="frame" x="22" y="128.5" width="326" height="93"/>
+                                                    <rect key="frame" x="20" y="127" width="330" height="93"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Başlık Başlık Başlık Başlık Başlık Başlık 1" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="fmN-AF-Jq1">
-                                                            <rect key="frame" x="0.0" y="0.0" width="326" height="48"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="330" height="48"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.999,99 ₺" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="rZI-pX-GbD">
-                                                            <rect key="frame" x="0.0" y="53" width="326" height="15.5"/>
+                                                            <rect key="frame" x="0.0" y="53" width="330" height="15.5"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999,99 ₺" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="A3Z-g6-zQM">
-                                                            <rect key="frame" x="0.0" y="73.5" width="326" height="19.5"/>
+                                                            <rect key="frame" x="0.0" y="73.5" width="330" height="19.5"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -145,16 +157,17 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="6Mq-nh-5rn" secondAttribute="bottom" id="3HX-IY-r8G"/>
-                                                <constraint firstItem="Iuf-sG-jdB" firstAttribute="leading" secondItem="dpb-aX-jga" secondAttribute="leading" constant="12" id="4Sc-Yt-rLa"/>
-                                                <constraint firstItem="Iuf-sG-jdB" firstAttribute="bottom" secondItem="dpb-aX-jga" secondAttribute="bottom" constant="-8.5" id="5V3-OS-BeK"/>
+                                                <constraint firstItem="HCw-d4-fdk" firstAttribute="centerY" secondItem="9s3-60-vCs" secondAttribute="centerY" id="3Ur-Ek-g5U"/>
+                                                <constraint firstItem="Iuf-sG-jdB" firstAttribute="bottom" secondItem="HCw-d4-fdk" secondAttribute="bottom" constant="-10" id="7CB-eE-gOW"/>
                                                 <constraint firstAttribute="trailing" secondItem="6Mq-nh-5rn" secondAttribute="trailing" id="DiJ-fa-sfB"/>
                                                 <constraint firstItem="6Mq-nh-5rn" firstAttribute="top" secondItem="9s3-60-vCs" secondAttribute="top" id="FLc-me-A63"/>
-                                                <constraint firstItem="dpb-aX-jga" firstAttribute="top" secondItem="9s3-60-vCs" secondAttribute="top" constant="10" id="Kfv-J5-EZW"/>
-                                                <constraint firstItem="dpb-aX-jga" firstAttribute="centerY" secondItem="9s3-60-vCs" secondAttribute="centerY" id="PBF-15-7Sd"/>
-                                                <constraint firstItem="dpb-aX-jga" firstAttribute="leading" secondItem="9s3-60-vCs" secondAttribute="leading" constant="10" id="SxO-dW-BRs"/>
+                                                <constraint firstItem="Iuf-sG-jdB" firstAttribute="leading" secondItem="HCw-d4-fdk" secondAttribute="leading" constant="10" id="H1b-u1-tS9"/>
                                                 <constraint firstItem="Iuf-sG-jdB" firstAttribute="centerX" secondItem="9s3-60-vCs" secondAttribute="centerX" id="gxJ-c6-ZJN"/>
+                                                <constraint firstItem="HCw-d4-fdk" firstAttribute="centerX" secondItem="9s3-60-vCs" secondAttribute="centerX" id="hlD-XP-FEc"/>
+                                                <constraint firstItem="HCw-d4-fdk" firstAttribute="top" secondItem="9s3-60-vCs" secondAttribute="top" constant="10" id="iOX-JT-U7K"/>
+                                                <constraint firstItem="Iuf-sG-jdB" firstAttribute="centerX" secondItem="HCw-d4-fdk" secondAttribute="centerX" id="sRa-Mm-ZqL"/>
+                                                <constraint firstItem="HCw-d4-fdk" firstAttribute="leading" secondItem="9s3-60-vCs" secondAttribute="leading" constant="10" id="tKc-d4-KvS"/>
                                                 <constraint firstItem="6Mq-nh-5rn" firstAttribute="leading" secondItem="9s3-60-vCs" secondAttribute="leading" id="xZF-CO-yln"/>
-                                                <constraint firstItem="dpb-aX-jga" firstAttribute="centerX" secondItem="9s3-60-vCs" secondAttribute="centerX" id="yZC-2n-O5U"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="370" height="240"/>
@@ -164,6 +177,7 @@
                                             <outlet property="lblDiscountedPrice" destination="A3Z-g6-zQM" id="4fa-d1-z5z"/>
                                             <outlet property="lblPrice" destination="rZI-pX-GbD" id="H8R-1m-3Ne"/>
                                             <outlet property="lblTitle" destination="fmN-AF-Jq1" id="M0G-o4-igj"/>
+                                            <outlet property="viewEmbeddingImage" destination="HCw-d4-fdk" id="y8h-85-OMc"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

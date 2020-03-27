@@ -33,6 +33,7 @@ class KEParallaxCollectionViewController: UIViewController, UICollectionViewDele
     var offsetScroll1 : CGFloat = 0
     var offsetScroll2 : CGFloat = 0
     var isPagingEnabled: Bool = true
+    var isParallaxOnCellEnabled: Bool = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +45,16 @@ class KEParallaxCollectionViewController: UIViewController, UICollectionViewDele
         flowLayout.sectionInset = UIEdgeInsets(top: insetValue, left: insetValue, bottom: insetValue, right: insetValue)
         self.collectionView.collectionViewLayout = flowLayout
         self.collectionView.backgroundColor = backgroundColor
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if isParallaxOnCellEnabled {
+            for cell in collectionView.visibleCells {
+                let cell: KEParallaxCell = cell as! KEParallaxCell
+                let xOffset: CGFloat = ((collectionView!.contentOffset.x - cell.frame.origin.x) / cell.imgCell.bounds.width) * 35
+                cell.setBackgroundImageOffset(imageOffset: CGPoint(x: xOffset, y: cell.imgCell.frame.origin.y))
+            }
+        }
     }
         
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
@@ -114,6 +125,8 @@ class KEParallaxCollectionViewController: UIViewController, UICollectionViewDele
             cell.delegate = self
             cell.tag = indexPath.row
             cell.btnOnCell.tag = indexPath.row
+            
+            cell.imgCell.image = UIImage(named: "asd.jpg")
         }
         return cell
     }
